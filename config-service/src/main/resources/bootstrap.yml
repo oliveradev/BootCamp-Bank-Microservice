@@ -1,0 +1,16 @@
+server: 
+  port: 8086
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/oliveradev/config-data.git
+          username: loliverv
+          password: cG8N6H1G1o
+  security:
+    user:
+      name: root
+      password: s3cr3t
+      
+#Colocar dependencia starter bootstrap#

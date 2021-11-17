@@ -1,0 +1,33 @@
+server:
+    port: 9100
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  main:
+    web-application-type: REACTIVE
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: customer-service
+          uri: http://localhost:9000
+          predicates:
+            - Path=/api/customer/**
+
+management:
+  endpoints:
+    web:
+      exposures:
+        include: "*"
+
+
+
+
