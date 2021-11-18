@@ -26,6 +26,5 @@ public class TransactionHandler {
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters.fromValue(t)))
                 .switchIfEmpty(ServerResponse.badRequest().build());
-
     }
 }

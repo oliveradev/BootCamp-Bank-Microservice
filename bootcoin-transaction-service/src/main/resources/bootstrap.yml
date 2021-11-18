@@ -1,9 +1,8 @@
 spring:
     application:
-        name: yankitransaction-service
+        name: bootcointransaction-service
     cloud:
         config:
             uri: http://localhost:8086
             username: root
             password: s3cr3t
-
